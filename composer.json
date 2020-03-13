@@ -1,0 +1,24 @@
+{
+  "name": "rs/awin",
+  "description": "awin",
+  "type": "oxideshop-module",
+  "keywords": ["oxid", "modules", "eShop", "cookie", "affiliate", "marketing"],
+  "homepage": "https://www.reisacher-software.de",
+  "license": [
+    "GPL-3.0-only",
+    "proprietary"
+  ],
+  "extra": {
+    "oxideshop": {
+      "target-directory": "rs/awin"
+    }
+  },
+  "require": {
+    "php": ">=5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "rs\\awin\\": "../../../source/modules/rs/awin"
+    }
+  }
+}
