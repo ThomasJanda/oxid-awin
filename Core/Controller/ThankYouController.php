@@ -25,11 +25,13 @@ class ThankYouController extends ThankYouController_parent
             $awc = \OxidEsales\Eshop\Core\Registry::getUtilsServer()->getOxCookie('awc');
 
             $url = "https://www.awin1.com/sread.php?tt=ss&tv=2&merchant=".$sMerchant;
-            $url .= "&amount=" . $oOrder->getTotalOrderSum();
+            //$url .= "&amount=" . $oOrder->getTotalOrderSum();
+            $url .= "&amount=" . $oOrder->oxorder__oxtotalnetsum->value;
             $url .= "&ch=aw";
             $url .= "&cr=" . $oOrder->getOrderCurrency()->name;
             $url .= "&ref=" . $oOrder->oxorder__oxordernr->value;
-            $url .= "&parts=DEFAULT:" . $oOrder->getTotalOrderSum();
+            //$url .= "&parts=DEFAULT:" . $oOrder->getTotalOrderSum();
+            $url .= "&parts=DEFAULT:" . $oOrder->oxorder__oxtotalnetsum->value;
             $url .= "&testmode=0&vc=" . "";
             if ($awc!="") {
                 $url .= "&cks=" . $awc; // Populate the Awin click checksum if one is associated with the conversion
