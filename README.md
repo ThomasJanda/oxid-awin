@@ -1,4 +1,4 @@
-# Oxid Cookie Manager
+# Oxid Awin integration
 
 ## Description
 

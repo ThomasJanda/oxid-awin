@@ -11,6 +11,7 @@ class ViewConfig extends ViewConfig_parent
      */
     public function rs_awin()
     {
+        /** @var Request $request */
         $request = oxNew(Request::class);
         $sValue=$request->getRequestParameter("awc");
         if($sValue!="")
